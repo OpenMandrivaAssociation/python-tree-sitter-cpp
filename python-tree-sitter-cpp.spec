@@ -6,6 +6,8 @@ License:	MIT
 Group:		Development/Python
 URL:		https://pypi.org/project/tree-sitter-cpp
 Source0:	https://files.pythonhosted.org/packages/20/2c/4dd63d705a8933543cad9b92ff31be849b164fec91a6eb63475ebc9ce668/tree_sitter_cpp-0.23.4.tar.gz
+# PyPI sdist omits src/tree_sitter/*.h
+Source1:	tree-sitter-c-headers.tar.xz
 BuildRequires:	python
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
@@ -19,6 +21,7 @@ Aider's grep-ast repo-map.
 
 %prep
 %autosetup -n tree_sitter_cpp-0.23.4
+tar -C src -xf %{SOURCE1}
 
 %build
 
