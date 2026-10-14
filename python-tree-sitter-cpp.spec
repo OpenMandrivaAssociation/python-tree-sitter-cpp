@@ -1,6 +1,6 @@
 Name:		python-tree-sitter-cpp
 Version:	0.23.4
-Release:	1
+Release:	2
 Summary:	Tree-sitter cpp grammar (Python bindings)
 License:	MIT
 Group:		Development/Python
@@ -9,7 +9,7 @@ Source0:	https://files.pythonhosted.org/packages/20/2c/4dd63d705a8933543cad9b92f
 # PyPI sdist omits src/tree_sitter/*.h
 Source1:	tree-sitter-c-headers.tar.xz
 BuildRequires:	python
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	clang
